@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiénes Somos — Productos Extranjeros Virales</title>
+  <style>
+    /* =========================================
+       TOKENS (paleta oficial PEV)
+    ========================================= */
+    :root {
+      --navy:    #07022A;
+      --black:   #0E0D17;
+      --magenta: #EF22EF;
+      --cyan:    #00F9FD;
+      --blue:    #2175EF;
+      --indigo:  #4948EE;
+      --pink:    #FF00A4;
+      --purple:  #AB7FD8;
+      --grey:    #B8C5E5;
+      --white:   #FFFFFF;
+
+      --glass:      rgba(255,255,255,0.04);
+      --glass-border: rgba(255,255,255,0.09);
+      --grad-brand: linear-gradient(90deg, var(--cyan), var(--magenta));
+      --grad-btn:   linear-gradient(135deg, var(--indigo), var(--blue));
+      --grad-hot:   linear-gradient(135deg, var(--magenta), var(--indigo));
+      --grad-top:   linear-gradient(90deg, var(--magenta), var(--cyan), var(--indigo));
+
+      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    /* =========================================
+       BASE
+    ========================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font);
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .container--blog {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* =========================================
+       NAV
+    ========================================= */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(14,13,23,0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 14px 0;
+    }
+    .nav__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .nav__logo {
+      font-size: 1.05rem;
+      font-weight: 800;
+      background: var(--grad-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      white-space: nowrap;
+    }
+    .nav__links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      list-style: none;
+    }
+    .nav__links a {
+      font-size: 0.85rem;
+      color: var(--grey);
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav__links a:hover { color: var(--cyan); }
+    .nav__links a.active { color: var(--cyan); }
+    .nav__cta {
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 8px 20px;
+      border-radius: 8px;
+      background: var(--grad-hot);
+      color: var(--white);
+      white-space: nowrap;
+      transition: filter 0.2s;
+    }
+    .nav__cta:hover { filter: brightness(1.15); }
+
+    /* =========================================
+       HERO BLOG
+    ========================================= */
+    .hero {
+      background: linear-gradient(180deg, var(--navy) 0%, var(--black) 100%);
+      padding: 80px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -100px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 400px;
+      background: radial-gradient(ellipse, rgba(0,249,253,0.08) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: -100px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(239,34,239,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .breadcrumb {
+      font-size: 0.78rem;
+      color: var(--grey);
+      margin-bottom: 20px;
+    }
+    .breadcrumb span { color: var(--cyan); }
+    .hero__tag {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      border: 1px solid rgba(0,249,253,0.3);
+      border-radius: 100px;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+    .hero__title {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+    .hero__title .grad {
+      background: var(--grad-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero__sub {
+      font-size: 1.05rem;
+      color: var(--grey);
+      max-width: 580px;
+      margin: 0 auto 32px;
+    }
+    .hero__meta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      font-size: 0.8rem;
+      color: var(--grey);
+      flex-wrap: wrap;
+    }
+    .hero__meta-dot { color: var(--magenta); }
+
+    /* =========================================
+       ARTÍCULO PRINCIPAL (layout blog)
+    ========================================= */
+    .article {
+      padding: 64px 0 80px;
+    }
+    .article__inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: start;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* -------- CONTENIDO PRINCIPAL -------- */
+    .article__body h2 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      margin: 48px 0 14px;
+      line-height: 1.2;
+      scroll-margin-top: 80px;
+    }
+    .article__body h2 .grad {
+      background: var(--grad-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .article__body h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--cyan);
+      margin: 28px 0 10px;
+    }
+    .article__body p {
+      font-size: 0.97rem;
+      color: var(--grey);
+      margin-bottom: 18px;
+      line-height: 1.8;
+    }
+    .article__body p strong { color: var(--white); font-weight: 700; }
+    .article__body ul {
+      list-style: none;
+      margin: 0 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .article__body ul li {
+      font-size: 0.95rem;
+      color: var(--grey);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .article__body ul li::before {
+      content: '→';
+      color: var(--cyan);
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .section-divider {
+      border: none;
+      height: 1px;
+      background: var(--glass-border);
+      margin: 48px 0;
+    }
+
+    /* STAT ROW */
+    .stat-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .stat-box {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .stat-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad-top);
+    }
+    .stat-box__num {
+      font-size: 1.7rem;
+      font-weight: 900;
+      background: var(--grad-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+    .stat-box__label { font-size: 0.75rem; color: var(--grey); margin-top: 4px; }
+
+    /* CALLOUT */
+    .callout {
+      background: linear-gradient(135deg, rgba(0,249,253,0.06), rgba(239,34,239,0.04));
+      border: 1px solid rgba(0,249,253,0.2);
+      border-left: 3px solid var(--cyan);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .callout p { margin: 0; font-size: 0.97rem; color: var(--white); line-height: 1.7; }
+
+    /* TEAM CARD */
+    .team-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 28px 0;
+    }
+    .team-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      text-align: left;
+      transition: border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .team-card:hover { border-color: rgba(0,249,253,0.25); }
+    .team-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--grad-top);
+    }
+    .team-card__avatar {
+      width: 160px; height: 160px;
+      border-radius: 12px;
+      flex-shrink: 0;
+      border: 2px solid rgba(239,34,239,0.35);
+      overflow: hidden;
+      background: var(--grad-hot);
+    }
+    .team-card__avatar img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+    .team-card__content { flex: 1; }
+    .team-card__name {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .team-card__role {
+      font-size: 0.75rem;
+      color: var(--cyan);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .team-card__bio {
+      font-size: 0.83rem;
+      color: var(--grey);
+      line-height: 1.6;
+      margin: 0;
+    }
+    .team-card__badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      background: rgba(0,249,253,0.08);
+      border: 1px solid rgba(0,249,253,0.2);
+      color: var(--cyan);
+      border-radius: 100px;
+      padding: 3px 10px;
+    }
+    .badge.hot {
+      background: rgba(239,34,239,0.08);
+      border-color: rgba(239,34,239,0.2);
+      color: var(--magenta);
+    }
+
+    /* PRODUCT CARD */
+    .product-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin: 28px 0;
+    }
+    .product-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      padding: 24px;
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      gap: 20px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+    .product-card:hover { border-color: rgba(239,34,239,0.25); }
+    .product-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      border-radius: 4px 0 0 4px;
+    }
+    .product-card.c1::before { background: var(--cyan); }
+    .product-card.c2::before { background: var(--magenta); }
+    .product-card.c3::before { background: var(--blue); }
+    .product-card.c4::before { background: var(--pink); }
+    .product-card.c5::before { background: linear-gradient(180deg, var(--cyan), var(--magenta)); }
+    .product-card.c6::before { background: var(--indigo); }
+    .product-card.c7::before { background: var(--purple); }
+    .product-card.c8::before { background: linear-gradient(180deg, var(--pink), var(--indigo)); }
+    .product-card__icon {
+      font-size: 2rem;
+      text-align: center;
+    }
+    .product-card__name {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .product-card__desc {
+      font-size: 0.83rem;
+      color: var(--grey);
+      line-height: 1.5;
+    }
+    .product-card__tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--pink);
+      background: rgba(255,0,164,0.1);
+      border: 1px solid rgba(255,0,164,0.25);
+      border-radius: 100px;
+      padding: 3px 10px;
+      white-space: nowrap;
+    }
+    .product-card__tag.new {
+      color: var(--cyan);
+      background: rgba(0,249,253,0.08);
+      border-color: rgba(0,249,253,0.2);
+    }
+
+    /* TIMELINE método */
+    .timeline {
+      position: relative;
+      margin: 28px 0;
+      padding-left: 32px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 10px; top: 8px; bottom: 8px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--cyan), var(--magenta), var(--indigo));
+    }
+    .timeline__step {
+      position: relative;
+      margin-bottom: 28px;
+    }
+    .timeline__step::before {
+      content: '';
+      position: absolute;
+      left: -26px; top: 5px;
+      width: 12px; height: 12px;
+      border-radius: 50%;
+      background: var(--cyan);
+      border: 2px solid var(--black);
+      box-shadow: 0 0 10px rgba(0,249,253,0.5);
+    }
+    .timeline__step:last-child { margin-bottom: 0; }
+    .timeline__title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+    .timeline__desc {
+      font-size: 0.85rem;
+      color: var(--grey);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* QUOTE */
+    .quote {
+      border-left: 3px solid var(--magenta);
+      padding: 16px 24px;
+      margin: 28px 0;
+      background: rgba(239,34,239,0.04);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .quote p {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--white);
+      margin: 0;
+    }
+    .quote cite {
+      font-size: 0.8rem;
+      color: var(--grey);
+      margin-top: 8px;
+      display: block;
+      font-style: normal;
+    }
+
+    /* CTA inline */
+    .cta-block {
+      background: linear-gradient(135deg, rgba(239,34,239,0.1), rgba(73,72,238,0.08));
+      border: 1px solid rgba(239,34,239,0.3);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin: 40px 0;
+    }
+    .cta-block::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--grad-top);
+    }
+    .cta-block h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: var(--white);
+    }
+    .cta-block p {
+      font-size: 0.9rem;
+      color: var(--grey);
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--white);
+      background: var(--grad-hot);
+      cursor: pointer;
+      border: none;
+      transition: filter 0.2s, transform 0.2s;
+      box-shadow: 0 0 30px rgba(239,34,239,0.3);
+    }
+    .btn:hover { filter: brightness(1.15); transform: translateY(-1px); }
+
+    /* -------- SIDEBAR -------- */
+    .sidebar {
+      position: sticky;
+      top: 80px;
+    }
+    .sidebar__widget {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .sidebar__widget::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--grad-top);
+    }
+    .sidebar__title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 14px;
+    }
+    .toc { list-style: none; }
+    .toc li { margin-bottom: 2px; }
+    .toc a {
+      font-size: 0.83rem;
+      color: var(--grey);
+      display: block;
+      padding: 6px 8px;
+      border-radius: 6px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .toc a:hover {
+      background: rgba(0,249,253,0.06);
+      color: var(--cyan);
+    }
+    .toc .toc__num {
+      color: var(--magenta);
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-right: 6px;
+    }
+
+    .sidebar__product {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--glass-border);
+      cursor: pointer;
+    }
+    .sidebar__product:last-child { border-bottom: none; padding-bottom: 0; }
+    .sidebar__product:first-of-type { padding-top: 0; }
+    .sidebar__product-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .sidebar__product-name { font-size: 0.83rem; font-weight: 600; line-height: 1.3; }
+    .sidebar__product-type { font-size: 0.72rem; color: var(--grey); }
+
+    .sidebar__btn {
+      display: block;
+      text-align: center;
+      padding: 11px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      background: var(--grad-hot);
+      color: var(--white);
+      transition: filter 0.2s;
+      margin-top: 16px;
+      box-shadow: 0 0 24px rgba(239,34,239,0.25);
+    }
+    .sidebar__btn:hover { filter: brightness(1.12); }
+
+    .sidebar__social a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.83rem;
+      color: var(--grey);
+      padding: 7px 0;
+      border-bottom: 1px solid var(--glass-border);
+      transition: color 0.2s;
+    }
+    .sidebar__social a:last-child { border-bottom: none; }
+    .sidebar__social a:hover { color: var(--cyan); }
+    .sidebar__social-icon { font-size: 1rem; }
+
+    /* =========================================
+       BLOG POSTS RELACIONADOS
+    ========================================= */
+    .related {
+      padding: 60px 0 80px;
+      border-top: 1px solid var(--glass-border);
+    }
+    .related__title {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cyan);
+      margin-bottom: 24px;
+    }
+    .related__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .post-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .post-card:hover {
+      border-color: rgba(0,249,253,0.2);
+      transform: translateY(-3px);
+    }
+    .post-card__thumb {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+    .post-card.t1 .post-card__thumb { background: linear-gradient(135deg, rgba(0,249,253,0.15), rgba(73,72,238,0.1)); }
+    .post-card.t2 .post-card__thumb { background: linear-gradient(135deg, rgba(239,34,239,0.12), rgba(73,72,238,0.08)); }
+    .post-card.t3 .post-card__thumb { background: linear-gradient(135deg, rgba(33,117,239,0.12), rgba(0,249,253,0.08)); }
+    .post-card__body { padding: 18px; }
+    .post-card__tag {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--cyan);
+      margin-bottom: 8px;
+    }
+    .post-card__title { font-size: 0.92rem; font-weight: 700; line-height: 1.4; margin-bottom: 8px; }
+    .post-card__meta { font-size: 0.75rem; color: var(--grey); }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+    .footer {
+      background: var(--navy);
+      border-top: 1px solid var(--glass-border);
+      padding: 48px 0 28px;
+      text-align: center;
+    }
+    .footer__logo {
+      font-size: 1.2rem;
+      font-weight: 800;
+      background: var(--grad-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 12px;
+    }
+    .footer__links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .footer__links a { font-size: 0.8rem; color: var(--grey); transition: color 0.2s; }
+    .footer__links a:hover { color: var(--cyan); }
+    .footer__copy { font-size: 0.75rem; color: rgba(184,197,229,0.4); }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+    @media (max-width: 900px) {
+      .article__inner { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+    }
+    @media (max-width: 640px) {
+      .stat-row { grid-template-columns: repeat(2, 1fr); }
+      .team-grid { grid-template-columns: 1fr; }
+      .product-card { grid-template-columns: 44px 1fr; }
+      .product-card__tag { display: none; }
+      .nav__links { display: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="index.html" class="nav__logo">ProductosExtranjeros<wbr>Virales</a>
+        <ul class="nav__links">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="quienes-somos.html" class="active">Quiénes Somos</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="testimonios.html">Testimonios</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+        </ul>
+        <a href="index.html#precio" class="nav__cta">Quiero el Método →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container--blog">
+<div class="hero__tag">Sobre nosotros</div>
+      <h1 class="hero__title">
+        El equipo detrás de<br />
+        <span class="grad">Productos Extranjeros Virales</span>
+      </h1>
+      <p class="hero__sub">
+        Psicóloga, emprendedora digital y arquitecta de sistemas — estas son las personas
+        que construyeron el método que ya generó más de 5 millones de dólares para el mercado hispano.
+      </p>
+      <div class="hero__meta">
+        <span>📅 Actualizado julio 2026</span>
+        <span class="hero__meta-dot">•</span>
+        <span>+80K alumnos activos</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ARTÍCULO PRINCIPAL -->
+  <main class="article">
+    <div class="container">
+      <div class="article__inner">
+
+        <!-- ===== CONTENIDO ===== -->
+        <article class="article__body">
+
+          <!-- INTRO -->
+          <p>
+            <strong>Productos Extranjeros Virales (PEV)</strong> no nació de un curso ni de un libro de marketing.
+            Nació de un experimento real: descubrir que los mercados de Brasil, EE.UU. y Europa están llenos
+            de productos digitales exitosos que el mercado hispano todavía no conoce — y que con la inteligencia
+            artificial correcta, cualquier persona puede recrearlos y venderlos antes de que alguien más lo haga.
+          </p>
+
+          <div class="stat-row">
+            <div class="stat-box">
+              <div class="stat-box__num">+5M</div>
+              <div class="stat-box__label">USD generados con el método</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box__num">Black SUN</div>
+              <div class="stat-box__label">Hotmart — Top 0.01% global</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box__num">+51</div>
+              <div class="stat-box__label">Países del mercado hispano</div>
+            </div>
+          </div>
+
+          <div class="callout">
+            <p>
+              "Somos los únicos en todo el mercado hispano enseñando a vender productos digitales extranjeros con IA.
+              No es afiliación. No es dropshipping. Es <strong>Espionaje Viral</strong> — la metodología que ya funciona."
+            </p>
+          </div>
+
+          <hr class="section-divider" />
+
+          <!-- QUIÉNES SOMOS -->
+          <h2 id="quienes">👥 <span class="grad">Quiénes somos</span></h2>
+
+          <p>
+            Somos un equipo de emprendedores digitales apasionados por una sola misión: demostrar que cualquier
+            persona en Latinoamérica puede construir un negocio digital rentable — sin aparecer en cámara,
+            sin crear contenido viral, y sin inventar un producto desde cero.
+          </p>
+
+          <div class="team-grid">
+
+            <div class="team-card">
+              <div class="team-card__avatar"><img src="images/team/santiago-leal.jpg" alt="Santiago Leal" /></div>
+              <div class="team-card__content">
+                <div class="team-card__name">Santiago Leal</div>
+                <div class="team-card__role">Co-fundador del Método</div>
+                <p class="team-card__bio">
+                  Co-creador del método junto con Laura Zabala. Arquitecto de la estrategia que llevó
+                  el sistema a más de 80.000 estudiantes en todo el mundo hispano.
+                </p>
+                <div class="team-card__badges">
+                  <span class="badge">Co-fundador</span>
+                  <span class="badge">Estrategia</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-card__avatar"><img src="images/team/laura-zabala.jpg" alt="Laura Zabala" /></div>
+              <div class="team-card__content">
+                <div class="team-card__name">Laura Zabala</div>
+                <div class="team-card__role">Co-fundadora del Método</div>
+                <p class="team-card__bio">
+                  Psicóloga de formación y empresaria digital. Co-creadora del método junto con Santiago Leal,
+                  ha facturado más de 5 millones de dólares en productos digitales al mercado hispano.
+                  Reconocida por Hotmart como top 0.01% global (Black SUN).
+                </p>
+                <div class="team-card__badges">
+                  <span class="badge hot">Hotmart Black SUN ☀️</span>
+                  <span class="badge">+5M USD</span>
+                  <span class="badge">@soylaurazabala</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-card__avatar"><img src="images/team/anderson-victoria.jpg" alt="Anderson Victoria" /></div>
+              <div class="team-card__content">
+                <div class="team-card__name">Anderson Victoria</div>
+                <div class="team-card__role">Experto en Marketing, Estrategia y Tráfico</div>
+                <p class="team-card__bio">
+                  Especialista en marketing digital y tráfico de pago con experiencia en empresas como 30X.
+                  Responsable de las estrategias de crecimiento y adquisición de clientes del equipo.
+                </p>
+                <div class="team-card__badges">
+                  <span class="badge">Meta Ads</span>
+                  <span class="badge">Marketing</span>
+                  <span class="badge">30X</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-card__avatar"><img src="images/team/alejandro-hincapie.jpg" alt="Alejandro Hincapié" /></div>
+              <div class="team-card__content">
+                <div class="team-card__name">Alejandro Hincapié</div>
+                <div class="team-card__role">Experto en Tráfico</div>
+                <p class="team-card__bio">
+                  Especialista en tráfico digital y optimización de campañas para productos digitales
+                  en el mercado hispano.
+                </p>
+                <div class="team-card__badges">
+                  <span class="badge">Tráfico Pagado</span>
+                  <span class="badge">Campañas</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-card__avatar"><img src="images/team/jackson-moncada.jpg" alt="Jackson Moncada" /></div>
+              <div class="team-card__content">
+                <div class="team-card__name">Jackson Moncada</div>
+                <div class="team-card__role">Especialista en Tráfico · Caso de Éxito</div>
+                <p class="team-card__bio">
+                  Estudiante que aplicó el método y facturó más de $50.000 USD. Hoy colabora con
+                  nuestro equipo de tráfico — el ejemplo vivo de que el sistema funciona.
+                </p>
+                <div class="team-card__badges">
+                  <span class="badge hot">+$50K USD</span>
+                  <span class="badge">Tráfico</span>
+                  <span class="badge">Caso de Éxito</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-card__avatar"><img src="images/team/laura-bermudez.jpg" alt="Laura Bermúdez" style="object-position: center 20%;" /></div>
+              <div class="team-card__content">
+                <div class="team-card__name">Laura Bermúdez</div>
+                <div class="team-card__role">Experta en Tecnología y Automatizaciones</div>
+                <p class="team-card__bio">
+                  Especialista en tecnología y automatización de procesos con experiencia en empresas como Torre.
+                  Responsable de toda la infraestructura tecnológica del equipo.
+                </p>
+                <div class="team-card__badges">
+                  <span class="badge">IA</span>
+                  <span class="badge">Automatización</span>
+                  <span class="badge">Torre</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <div class="team-card__avatar"><img src="images/team/manuela-torres.jpg" alt="Manuela Torres" /></div>
+              <div class="team-card__content">
+                <div class="team-card__name">Manuela Torres</div>
+                <div class="team-card__role">Líder de Operaciones</div>
+                <p class="team-card__bio">
+                  Responsable de que toda la operación funcione de manera eficiente, coordinando al equipo
+                  y garantizando la mejor experiencia para nuestros estudiantes.
+                </p>
+                <div class="team-card__badges">
+                  <span class="badge">Operaciones</span>
+                  <span class="badge">Experiencia del Alumno</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="quote">
+            <p>"No buscamos venderte un sueño. Te mostramos el sistema exacto que ya funciona — con evidencia,
+            con resultados reales de alumnos, y con nosotros implementándolo también hoy."</p>
+            <cite>— Laura Zabala, fundadora PEV</cite>
+          </div>
+
+        </article>
+
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ARTÍCULOS RELACIONADOS -->
+  <section class="related">
+    <div class="container">
+      <div class="related__title">También te puede interesar</div>
+      <div class="related__grid">
+
+        <div class="post-card t1">
+          <div class="post-card__thumb">🌍</div>
+          <div class="post-card__body">
+            <div class="post-card__tag">Método PEV</div>
+            <div class="post-card__title">Cómo identificar productos extranjeros virales en 2026</div>
+            <div class="post-card__meta">5 min · Método</div>
+          </div>
+        </div>
+
+        <div class="post-card t2">
+          <div class="post-card__thumb">🤖</div>
+          <div class="post-card__body">
+            <div class="post-card__tag">Inteligencia Artificial</div>
+            <div class="post-card__title">AURA: Cómo la IA puede crear tu producto en horas</div>
+            <div class="post-card__meta">7 min · IA &amp; Herramientas</div>
+          </div>
+        </div>
+
+        <div class="post-card t3">
+          <div class="post-card__thumb">💸</div>
+          <div class="post-card__body">
+            <div class="post-card__tag">Casos de éxito</div>
+            <div class="post-card__title">De 0 a $X.XXX USD: la historia de nuestros primeros alumnos</div>
+            <div class="post-card__meta">10 min · Resultados</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">ProductosExtranjeros<wbr>Virales</div>
+      <div class="footer__links">
+        <a href="index.html">Inicio</a>
+        <a href="quienes-somos.html">Quiénes Somos</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+        <a href="#">Contacto</a>
+      </div>
+      <p class="footer__copy">
+        © 2026 Laura Zabala · Productos Extranjeros Virales · Todos los derechos reservados.<br />
+        Los resultados mencionados son testimoniales y no garantizan los mismos resultados para todos.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    /* TOC — highlight activo al hacer scroll */
+    const sections = document.querySelectorAll('[id]');
+    const tocLinks = document.querySelectorAll('.toc a');
+    window.addEventListener('scroll', function() {
+      let current = '';
+      sections.forEach(function(s) {
+        if (window.scrollY >= s.offsetTop - 100) current = s.id;
+      });
+      tocLinks.forEach(function(a) {
+        a.style.color = a.getAttribute('href') === '#' + current ? 'var(--cyan)' : '';
+        a.style.background = a.getAttribute('href') === '#' + current ? 'rgba(0,249,253,0.06)' : '';
+      });
+    });
+  </script>
+
+</body>
+</html>
