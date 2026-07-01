@@ -3,29 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Productos Extranjeros Virales — Laura Zabala</title>
+  <title>Productos Extranjeros Virales — Santiago Leal y Laura Zabala | Método PEV</title>
   <style>
     /* =========================================
        TOKENS / VARIABLES — Paleta oficial PEV
     ========================================= */
     :root {
-      --bg:          #0E0D17;
-      --bg-card:     rgba(255,255,255,0.04);
-      --bg-section:  #07022A;
-      --border:      rgba(255,255,255,0.09);
-      --border-gold: rgba(0,249,253,0.2);
+      --bg:          #FFFFFF;
+      --bg-card:     #FFFFFF;
+      --bg-section:  #F3F0FF;
+      --border:      rgba(73,72,238,0.13);
+      --border-gold: rgba(73,72,238,0.22);
 
       --purple:      #4948EE;
       --purple-dark: #07022A;
-      --gold:        #00F9FD;
+      --gold:        #4948EE;
       --gold-light:  #EF22EF;
       --white:       #FFFFFF;
-      --gray-200:    #E5E7EB;
-      --gray-400:    #B8C5E5;
-      --gray-600:    #4B5563;
+      --gray-200:    #1A1A2E;
+      --gray-400:    #5B5B80;
+      --gray-600:    #8888A0;
 
       --gradient-hero:   linear-gradient(180deg, #07022A 0%, #0E0D17 100%);
-      --gradient-gold:   linear-gradient(90deg, #00F9FD, #EF22EF);
+      --gradient-gold:   linear-gradient(90deg, #4948EE, #EF22EF);
       --gradient-purple: linear-gradient(135deg, #EF22EF, #4948EE);
       --gradient-cta:    linear-gradient(135deg, #EF22EF, #4948EE);
 
@@ -42,7 +42,7 @@
     body {
       font-family: var(--font);
       background: var(--bg);
-      color: var(--white);
+      color: #1A1A2E;
       line-height: 1.6;
       overflow-x: hidden;
     }
@@ -140,9 +140,9 @@
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(14, 13, 23, 0.92);
+      background: rgba(7, 2, 42, 0.97);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
       padding: 14px 0;
     }
     .nav__inner {
@@ -156,7 +156,7 @@
       text-decoration: none;
     }
     .nav__logo img {
-      height: 44px;
+      height: 56px;
       width: auto;
       display: block;
     }
@@ -168,11 +168,11 @@
     }
     .nav__links a {
       font-size: 0.85rem;
-      color: var(--gray-400);
+      color: rgba(255,255,255,0.75);
       font-weight: 500;
       transition: color 0.2s;
     }
-    .nav__links a:hover, .nav__links a.active { color: var(--gold); }
+    .nav__links a:hover, .nav__links a.active { color: #00F9FD; }
     .nav__cta { font-size: 14px; padding: 10px 24px; }
 
     /* =========================================
@@ -919,6 +919,72 @@
     .product__emoji { font-size: 40px; margin-bottom: 12px; }
     .product__name { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
     .product__desc { font-size: 13px; color: var(--gray-400); line-height: 1.5; }
+
+    /* =========================================
+       LIGHT THEME OVERRIDES
+    ========================================= */
+    /* Tag on light bg */
+    .tag { color: var(--purple); border-color: rgba(73,72,238,0.3); }
+    .section-title span { color: var(--purple); }
+
+    /* Hero stays dark — fix child text */
+    .hero { color: #FFFFFF; }
+    .hero__sub { color: rgba(255,255,255,0.82); }
+    .hero__trust { color: rgba(255,255,255,0.6); }
+    .hero__trust span { color: #EF22EF; }
+
+    /* Proof bar */
+    .proof-bar { background: #F3F0FF; border-color: rgba(73,72,238,0.14); }
+
+    /* Cards depth on white */
+    .problem__item { box-shadow: 0 2px 14px rgba(73,72,238,0.06); }
+    .method__step { box-shadow: 0 4px 20px rgba(73,72,238,0.06); }
+    .method__step:hover { border-color: rgba(73,72,238,0.35); }
+    .module { box-shadow: 0 2px 12px rgba(73,72,238,0.05); }
+    .module:hover { border-color: rgba(73,72,238,0.3); }
+    .testimonial { box-shadow: 0 4px 20px rgba(73,72,238,0.06); }
+    .testimonial__author { border-color: var(--border); }
+    .faq__item { box-shadow: 0 2px 8px rgba(73,72,238,0.04); }
+    .team__card { box-shadow: 0 2px 12px rgba(73,72,238,0.05); }
+    .team__card:hover { border-color: rgba(73,72,238,0.3); }
+    .product__card { box-shadow: 0 2px 12px rgba(73,72,238,0.05); }
+    .product__card:hover { border-color: rgba(73,72,238,0.3); }
+    .tool-pill { box-shadow: 0 2px 8px rgba(73,72,238,0.04); }
+
+    /* Who cards */
+    .who__card--yes { background: rgba(73,72,238,0.05); border-color: rgba(73,72,238,0.22); }
+    .who__card--no  { background: rgba(255,70,70,0.04); }
+
+    /* Method section */
+    .method { background: #F3F0FF; }
+
+    /* Creator section */
+    .creator { background: #F3F0FF; }
+    .creator__photo { background: rgba(73,72,238,0.08); color: var(--gray-400); }
+    .creator__stat { box-shadow: 0 2px 12px rgba(73,72,238,0.06); }
+
+    /* Badge */
+    .badge { background: rgba(73,72,238,0.07); border-color: rgba(73,72,238,0.2); color: var(--purple); }
+
+    /* Bonus */
+    .bonus { background: linear-gradient(135deg, rgba(73,72,238,0.05), rgba(239,34,239,0.05)); }
+
+    /* Guarantee */
+    .guarantee__box { background: linear-gradient(135deg, rgba(73,72,238,0.06), rgba(239,34,239,0.06)); }
+
+    /* Pricing */
+    .pricing { background: linear-gradient(180deg, #FFFFFF 0%, #F3F0FF 100%); }
+    .pricing__box { box-shadow: 0 20px 60px rgba(73,72,238,0.10); }
+
+    /* Sticky CTA bar */
+    .sticky-cta { background: #FFFFFF; border-top-color: rgba(73,72,238,0.15); box-shadow: 0 -4px 20px rgba(73,72,238,0.08); }
+
+    /* Footer stays dark */
+    .footer { color: rgba(255,255,255,0.7); }
+    .footer__logo { color: #FFFFFF; }
+    .footer__links a { color: rgba(255,255,255,0.55); }
+    .footer__links a:hover { color: #00F9FD; }
+    .footer__copy { color: rgba(255,255,255,0.4); }
   </style>
 </head>
 
