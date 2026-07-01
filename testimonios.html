@@ -175,6 +175,21 @@
       display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700;
     }
 
+    /* VIDEO */
+    .video-section { padding: 60px 0 0; }
+    .video-section__label {
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--cyan); margin-bottom: 16px; text-align: center;
+    }
+    .video-wrapper {
+      position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+      border-radius: 16px; border: 1px solid var(--glass-border);
+      box-shadow: 0 0 60px rgba(239,34,239,0.15);
+    }
+    .video-wrapper iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;
+    }
+
     /* SCREENSHOTS */
     .screenshots { padding: 60px 0; background: var(--navy); }
     .screenshots__grid {
@@ -336,6 +351,16 @@
     </div>
   </section>
 
+
+  <!-- VIDEO -->
+  <section class="video-section">
+    <div class="container--narrow">
+      <div class="video-section__label">Video testimonial</div>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/o4V0-UU5EuE" title="Testimonio PEV" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
 
   <!-- SCREENSHOTS reales de alumnos -->
   <section class="screenshots">
