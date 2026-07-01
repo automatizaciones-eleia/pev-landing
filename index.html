@@ -151,13 +151,14 @@
       justify-content: space-between;
     }
     .nav__logo {
-      font-size: 18px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
-      background: linear-gradient(90deg, #00F9FD, #EF22EF);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .nav__logo img {
+      height: 44px;
+      width: auto;
+      display: block;
     }
     .nav__links {
       display: flex;
@@ -927,7 +928,9 @@
   <nav class="nav">
     <div class="container">
       <div class="nav__inner">
-        <div class="nav__logo">ProductosExtranjeros<wbr>Virales</div>
+        <a href="index.html" class="nav__logo">
+          <img src="images/logo-pev.png" alt="Productos Extranjeros Virales">
+        </a>
         <ul class="nav__links">
           <li><a href="index.html" class="active">Inicio</a></li>
           <li><a href="quienes-somos.html">Quiénes Somos</a></li>

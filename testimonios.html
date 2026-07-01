@@ -38,11 +38,8 @@
       border-bottom: 1px solid var(--glass-border); padding: 14px 0;
     }
     .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .nav__logo {
-      font-size: 1.05rem; font-weight: 800;
-      background: var(--grad-brand); -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent; background-clip: text; white-space: nowrap;
-    }
+    .nav__logo { display: flex; align-items: center; text-decoration: none; }
+    .nav__logo img { height: 44px; width: auto; display: block; }
     .nav__links { display: flex; align-items: center; gap: 20px; list-style: none; }
     .nav__links a { font-size: 0.85rem; color: var(--grey); font-weight: 500; transition: color 0.2s; }
     .nav__links a:hover, .nav__links a.active { color: var(--cyan); }
@@ -311,7 +308,9 @@
   <nav class="nav">
     <div class="container">
       <div class="nav__inner">
-        <a href="index.html" class="nav__logo">ProductosExtranjeros<wbr>Virales</a>
+        <a href="index.html" class="nav__logo">
+          <img src="images/logo-pev.png" alt="Productos Extranjeros Virales">
+        </a>
         <ul class="nav__links">
           <li><a href="index.html">Inicio</a></li>
           <li><a href="quienes-somos.html">Quiénes Somos</a></li>
