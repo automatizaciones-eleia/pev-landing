@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qué son los Productos Extranjeros Virales y Cómo Ganar Dinero con Ellos (2026) | PEV</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <style>
+    :root {
+      --navy:    #07022A;
+      --magenta: #EF22EF;
+      --cyan:    #00F9FD;
+      --indigo:  #4948EE;
+      --grey:    #5B5B80;
+      --white:   #FFFFFF;
+      --grad-hot:   linear-gradient(135deg, #EF22EF, #4948EE);
+      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --radius: 14px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: #FFFFFF; color: #1A1A2E; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(7,2,42,0.97); backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.08); padding: 14px 0;
+    }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav__logo { display: flex; align-items: center; text-decoration: none; }
+    .nav__logo img { height: 80px; width: auto; display: block; }
+    .nav__links { display: flex; align-items: center; gap: 20px; list-style: none; }
+    .nav__links a { font-size: 1rem; color: rgba(255,255,255,0.75); font-weight: 500; transition: color 0.2s; }
+    .nav__links a:hover, .nav__links a.active { color: var(--cyan); }
+    .nav__cta {
+      font-size: 0.82rem; font-weight: 700; padding: 10px 22px; border-radius: 100px;
+      background: var(--grad-hot); color: #fff; white-space: nowrap; transition: filter 0.2s;
+    }
+    .nav__cta:hover { filter: brightness(1.12); }
+
+    /* HERO ARTÍCULO */
+    .hero {
+      background: linear-gradient(180deg, var(--navy) 0%, #0E0D17 100%);
+      padding: 72px 0 56px; text-align: center; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 400px;
+      background: radial-gradient(ellipse, rgba(73,72,238,0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero__tag {
+      display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--cyan); border: 1px solid rgba(0,249,253,0.3);
+      border-radius: 100px; padding: 4px 14px; margin-bottom: 20px;
+    }
+    .hero__title {
+      font-size: clamp(1.6rem, 4vw, 2.8rem); font-weight: 900; line-height: 1.15;
+      letter-spacing: -0.5px; color: #FFFFFF; max-width: 860px; margin: 0 auto 16px;
+    }
+    .hero__meta {
+      font-size: 0.8rem; color: rgba(255,255,255,0.5);
+      display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap;
+    }
+    .hero__meta-dot { color: var(--magenta); }
+
+    /* CONTENIDO ARTÍCULO */
+    .article { padding: 64px 0 80px; }
+    .article__inner { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+    .article__body h2 {
+      font-size: 1.5rem; font-weight: 800; margin: 48px 0 14px; line-height: 1.2; color: #1A1A2E;
+    }
+    .article__body h2 .grad {
+      background: linear-gradient(90deg, var(--indigo), var(--magenta));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .article__body h3 {
+      font-size: 1.05rem; font-weight: 700; color: var(--indigo); margin: 28px 0 10px;
+    }
+    .article__body p {
+      font-size: 0.97rem; color: #444455; margin-bottom: 18px; line-height: 1.85;
+    }
+    .article__body p strong { color: #1A1A2E; font-weight: 700; }
+    .article__body ul {
+      list-style: none; margin: 0 0 20px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .article__body ul li {
+      font-size: 0.95rem; color: #444455; display: flex; align-items: flex-start; gap: 10px;
+    }
+    .article__body ul li::before {
+      content: '→'; color: var(--indigo); font-weight: 700; flex-shrink: 0; margin-top: 2px;
+    }
+
+    .divider {
+      border: none; height: 1px; background: rgba(73,72,238,0.1); margin: 40px 0;
+    }
+
+    /* CALLOUT */
+    .callout {
+      background: linear-gradient(135deg, rgba(73,72,238,0.05), rgba(239,34,239,0.04));
+      border: 1px solid rgba(73,72,238,0.18);
+      border-left: 3px solid var(--indigo);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 20px 24px; margin: 28px 0;
+    }
+    .callout p { margin: 0; font-size: 0.97rem; color: #1A1A2E; line-height: 1.75; }
+
+    /* STEP CARDS */
+    .steps { display: flex; flex-direction: column; gap: 16px; margin: 28px 0; }
+    .step {
+      background: #FFFFFF; border: 1px solid rgba(73,72,238,0.12);
+      border-radius: var(--radius); padding: 22px 24px;
+      display: flex; gap: 18px; align-items: flex-start;
+      box-shadow: 0 4px 16px rgba(73,72,238,0.06);
+    }
+    .step__num {
+      width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+      background: var(--grad-hot); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; font-weight: 800;
+    }
+    .step__title { font-size: 0.97rem; font-weight: 700; margin-bottom: 4px; color: #1A1A2E; }
+    .step__desc { font-size: 0.88rem; color: #5B5B80; line-height: 1.6; }
+
+    /* STAT ROW */
+    .stat-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 28px 0;
+    }
+    .stat-box {
+      background: #FFFFFF; border: 1px solid rgba(73,72,238,0.13);
+      border-radius: var(--radius); padding: 20px 16px; text-align: center;
+      box-shadow: 0 4px 16px rgba(73,72,238,0.06); position: relative; overflow: hidden;
+    }
+    .stat-box::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--magenta), var(--cyan), var(--indigo));
+    }
+    .stat-box__num {
+      font-size: 1.7rem; font-weight: 900;
+      background: linear-gradient(90deg, var(--indigo), var(--magenta));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+      line-height: 1;
+    }
+    .stat-box__label { font-size: 0.75rem; color: #5B5B80; margin-top: 4px; }
+
+    /* FAQ MINI */
+    .faq-mini { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+    .faq-mini__item {
+      background: #FFFFFF; border: 1px solid rgba(73,72,238,0.12);
+      border-radius: var(--radius); overflow: hidden;
+      box-shadow: 0 2px 8px rgba(73,72,238,0.04);
+    }
+    .faq-mini__q {
+      padding: 16px 20px; font-size: 0.92rem; font-weight: 600;
+      cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      user-select: none;
+    }
+    .faq-mini__q::after { content: '+'; font-size: 20px; color: var(--indigo); flex-shrink: 0; transition: transform 0.2s; }
+    .faq-mini__item.open .faq-mini__q::after { transform: rotate(45deg); }
+    .faq-mini__a {
+      display: none; padding: 0 20px 16px; font-size: 0.88rem; color: #5B5B80; line-height: 1.7;
+    }
+    .faq-mini__item.open .faq-mini__a { display: block; }
+
+    /* CTA ARTÍCULO */
+    .article-cta {
+      margin: 48px 0 0; padding: 40px 36px; text-align: center;
+      background: linear-gradient(135deg, rgba(73,72,238,0.06), rgba(239,34,239,0.06));
+      border: 1px solid rgba(73,72,238,0.18); border-radius: 20px;
+    }
+    .article-cta__title { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
+    .article-cta__sub { font-size: 0.95rem; color: #5B5B80; margin-bottom: 24px; }
+    .btn-cta {
+      display: inline-block; padding: 15px 40px; border-radius: 100px;
+      font-weight: 700; font-size: 1rem; color: #fff;
+      background: var(--grad-hot); box-shadow: 0 8px 32px rgba(239,34,239,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(239,34,239,0.45); }
+
+    /* GRID DE ARTÍCULOS */
+    .more { padding: 60px 0 80px; border-top: 1px solid rgba(73,72,238,0.1); }
+    .more__label {
+      font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--indigo); margin-bottom: 24px;
+    }
+    .more__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .post-card {
+      background: #FFFFFF; border: 1px solid rgba(73,72,238,0.12);
+      border-radius: var(--radius); overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+      box-shadow: 0 2px 12px rgba(73,72,238,0.05);
+    }
+    .post-card:hover { border-color: rgba(73,72,238,0.25); transform: translateY(-3px); }
+    .post-card__thumb {
+      height: 110px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem;
+    }
+    .post-card.t1 .post-card__thumb { background: linear-gradient(135deg, rgba(73,72,238,0.08), rgba(0,249,253,0.06)); }
+    .post-card.t2 .post-card__thumb { background: linear-gradient(135deg, rgba(239,34,239,0.07), rgba(73,72,238,0.06)); }
+    .post-card.t3 .post-card__thumb { background: linear-gradient(135deg, rgba(0,249,253,0.07), rgba(73,72,238,0.05)); }
+    .post-card__body { padding: 16px; }
+    .post-card__tag { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--indigo); margin-bottom: 6px; }
+    .post-card__title { font-size: 0.9rem; font-weight: 700; line-height: 1.4; margin-bottom: 6px; color: #1A1A2E; }
+    .post-card__meta { font-size: 0.72rem; color: #5B5B80; }
+
+    /* FOOTER */
+    .footer { background: #07022A; border-top: 1px solid rgba(255,255,255,0.08); padding: 48px 0 28px; text-align: center; }
+    .footer__logo { margin: 0 auto 16px; width: 120px; }
+    .footer__logo img { width: 100%; opacity: 0.9; }
+    .footer__links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+    .footer__links a { font-size: 0.8rem; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    .footer__links a:hover { color: var(--cyan); }
+    .footer__copy { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+
+    @media (max-width: 640px) {
+      .nav__links { display: none; }
+      .stat-row { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="./" class="nav__logo">
+          <img src="images/logo-pev.png" alt="Productos Extranjeros Virales">
+        </a>
+        <ul class="nav__links">
+          <li><a href="./">Inicio</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="testimonios.html">Testimonios</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+        </ul>
+        <a href="https://pay.hotmart.com/Q97064335L?off=twez13dn&checkoutMode=10&src=RWP" target="_blank" class="nav__cta">Quiero el Método →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero__tag">Guía gratuita · Método PEV</div>
+      <h1 class="hero__title">
+        Productos Extranjeros Virales: Qué Son y Cómo Ganar Dinero con Ellos en 2026
+      </h1>
+      <div class="hero__meta">
+        <span>Por Santiago Leal y Laura Zabala</span>
+        <span class="hero__meta-dot">✦</span>
+        <span>Actualizado: julio 2026</span>
+        <span class="hero__meta-dot">✦</span>
+        <span>10 min de lectura</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ARTÍCULO -->
+  <article class="article">
+    <div class="article__inner">
+
+      <div class="article__body">
+
+        <p>
+          El <strong>Método PEV (Productos Extranjeros Virales)</strong> es el sistema que crearon Santiago Leal y Laura Zabala para identificar productos digitales que ya son exitosos en mercados anglosajones, adaptarlos al español con inteligencia artificial en cuestión de horas, y venderlos al mercado hispano —<strong>sin aparecer en cámara, sin crear contenido desde cero y sin inversión inicial en publicidad</strong>.
+        </p>
+
+        <p>
+          En esta guía vas a entender exactamente cómo funciona el método, por qué está generando resultados reales para más de 80.000 estudiantes en 51 países, y cómo puedes empezar a aplicarlo hoy.
+        </p>
+
+        <div class="stat-row">
+          <div class="stat-box">
+            <div class="stat-box__num">+80K</div>
+            <div class="stat-box__label">Estudiantes activos</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box__num">51</div>
+            <div class="stat-box__label">Países</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-box__num">+$5M</div>
+            <div class="stat-box__label">Generados por alumnos</div>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <h2><span class="grad">¿Qué es el Método PEV?</span></h2>
+
+        <p>
+          PEV significa <strong>Productos Extranjeros Virales</strong>. La premisa es simple: en Estados Unidos y otros mercados anglosajones existe un ecosistema de productos digitales enormemente desarrollado — cursos, ebooks, membresías, software, templates — muchos de los cuales son éxitos comprobados con miles de ventas.
+        </p>
+
+        <p>
+          El mercado hispano, en cambio, tiene una demanda enorme pero una oferta mucho más limitada. Esa brecha es la oportunidad. El Método PEV te enseña a encontrar esos productos virales, adaptar su propuesta de valor al español con IA en horas, y venderlos en plataformas como Hotmart, Gumroad o Skool — <strong>sin necesidad de crear el producto desde cero</strong>.
+        </p>
+
+        <div class="callout">
+          <p>💡 <strong>Importante:</strong> El Método PEV no enseña a piratear ni copiar contenido ajeno. Enseña a identificar nichos validados, crear productos originales en español inspirados en lo que ya funciona, y aprovechar tendencias antes de que lleguen al mercado latino.</p>
+        </div>
+
+        <hr class="divider">
+
+        <h2><span class="grad">El Método PEV en 5 Pasos</span></h2>
+
+        <p>Así funciona el sistema que aplican los más de 80.000 estudiantes de PEV:</p>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">1</div>
+            <div>
+              <div class="step__title">Identificar productos virales en mercados extranjeros</div>
+              <div class="step__desc">Usamos herramientas específicas para detectar productos digitales con alta demanda en EE.UU., Canadá o UK que aún no tienen competencia fuerte en español.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <div>
+              <div class="step__title">Validar la demanda en el mercado hispano</div>
+              <div class="step__desc">Antes de crear nada, confirmamos que hay audiencia real para ese tema en español. Esto elimina el riesgo de invertir tiempo en algo que nadie quiere comprar.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <div>
+              <div class="step__title">Crear el producto con IA en horas, no semanas</div>
+              <div class="step__desc">Con los flujos de IA que enseñamos en PEV, un ebook, mini-curso o template puede estar listo en un día — sin conocimientos técnicos previos.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">4</div>
+            <div>
+              <div class="step__title">Publicar y vender en plataformas de distribución</div>
+              <div class="step__desc">Hotmart, Gumroad, Skool o una página simple. Te enseñamos a configurar tu tienda digital y empezar a recibir pagos el mismo día.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">5</div>
+            <div>
+              <div class="step__title">Escalar con afiliados y tráfico orgánico</div>
+              <div class="step__desc">Una vez que tienes ventas, el sistema te enseña a crear redes de afiliados que vendan por ti — generando ingresos sin que tengas que estar presente constantemente.</div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <h2><span class="grad">¿Para Quién es el Método PEV?</span></h2>
+
+        <p>El método funciona para cualquier persona que quiera generar ingresos digitales, pero es especialmente efectivo si:</p>
+
+        <ul>
+          <li>No tienes experiencia previa en negocios digitales</li>
+          <li>No quieres aparecer en cámara ni crear contenido en redes sociales</li>
+          <li>No tienes presupuesto para publicidad pagada</li>
+          <li>Quieres un sistema probado, no construir algo desde cero</li>
+          <li>Vives en Latinoamérica o España y quieres ingresos en USD</li>
+        </ul>
+
+        <div class="callout">
+          <p>🌎 Estudiantes de PEV están generando entre $500 y $50.000 USD mensuales. Jackson Moncada, uno de nuestros alumnos más destacados, superó los <strong>$50.000 USD en un solo mes</strong> aplicando este sistema.</p>
+        </div>
+
+        <hr class="divider">
+
+        <h2><span class="grad">Preguntas Frecuentes sobre el Método PEV</span></h2>
+
+        <div class="faq-mini">
+          <div class="faq-mini__item">
+            <div class="faq-mini__q">¿Necesito experiencia previa para aplicar el Método PEV?</div>
+            <div class="faq-mini__a">No. El método está diseñado para personas que parten desde cero. Santiago y Laura construyeron el curso pensando en alguien que nunca ha vendido nada digital. Tenemos estudiantes de 18 a 65 años con resultados comprobados.</div>
+          </div>
+          <div class="faq-mini__item">
+            <div class="faq-mini__q">¿Cuánto tiempo lleva ver resultados?</div>
+            <div class="faq-mini__a">Los primeros estudiantes suelen hacer su primera venta entre la semana 1 y 3. El tiempo varía según la dedicación. Con 1-2 horas diarias ya puedes avanzar al ritmo del programa.</div>
+          </div>
+          <div class="faq-mini__item">
+            <div class="faq-mini__q">¿Funciona si vivo fuera de Colombia?</div>
+            <div class="faq-mini__a">Sí. El método no está limitado a ningún país. Tenemos estudiantes en más de 51 países — México, Argentina, España, Chile, Perú, Ecuador, Estados Unidos y muchos más.</div>
+          </div>
+          <div class="faq-mini__item">
+            <div class="faq-mini__q">¿Qué plataformas se usan para vender?</div>
+            <div class="faq-mini__a">Principalmente Hotmart y Gumroad para productos digitales, y Skool para comunidades. Todas son gratuitas para empezar — solo cobran comisión cuando vendes.</div>
+          </div>
+          <div class="faq-mini__item">
+            <div class="faq-mini__q">¿El programa tiene garantía?</div>
+            <div class="faq-mini__a">Sí. PEV tiene 7 días de garantía de devolución total. Si en la primera semana sientes que el programa no es para ti, te devolvemos el 100% sin preguntas.</div>
+          </div>
+        </div>
+
+        <div class="article-cta">
+          <div class="article-cta__title">¿Listo para aplicar el Método PEV?</div>
+          <div class="article-cta__sub">Únete a más de 80.000 estudiantes que ya generan ingresos en dólares desde Latinoamérica y España.</div>
+          <a href="https://pay.hotmart.com/Q97064335L?off=twez13dn&checkoutMode=10&src=RWP" target="_blank" class="btn-cta">Quiero el Método PEV →</a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <!-- MÁS ARTÍCULOS -->
+  <section class="more">
+    <div class="container">
+      <div class="more__label">Más recursos</div>
+      <div class="more__grid">
+        <div class="post-card t1">
+          <div class="post-card__thumb">🤖</div>
+          <div class="post-card__body">
+            <div class="post-card__tag">Herramientas IA</div>
+            <div class="post-card__title">Las 7 herramientas de IA que usamos para crear productos digitales en horas</div>
+            <div class="post-card__meta">Próximamente</div>
+          </div>
+        </div>
+        <div class="post-card t2">
+          <div class="post-card__thumb">💰</div>
+          <div class="post-card__body">
+            <div class="post-card__tag">Estrategia</div>
+            <div class="post-card__title">Cómo encontrar nichos virales en EE.UU. antes de que lleguen al mercado hispano</div>
+            <div class="post-card__meta">Próximamente</div>
+          </div>
+        </div>
+        <div class="post-card t3">
+          <div class="post-card__thumb">📈</div>
+          <div class="post-card__body">
+            <div class="post-card__tag">Escalado</div>
+            <div class="post-card__title">Cómo construir una red de afiliados que venda por ti mientras duermes</div>
+            <div class="post-card__meta">Próximamente</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">
+        <img src="images/logo-pev.png" alt="Productos Extranjeros Virales">
+      </div>
+      <div class="footer__links">
+        <a href="./">Inicio</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+      <div class="footer__copy">© 2026 Productos Extranjeros Virales — Santiago Leal y Laura Zabala. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-mini__q').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        item.classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>

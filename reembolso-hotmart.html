@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cómo Pedir un Reembolso en Hotmart: Guía Paso a Paso (2026) | PEV</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <style>
+    :root {
+      --navy:    #07022A;
+      --magenta: #EF22EF;
+      --cyan:    #00F9FD;
+      --indigo:  #4948EE;
+      --grad-hot: linear-gradient(135deg, #EF22EF, #4948EE);
+      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --radius: 14px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: #FFFFFF; color: #1A1A2E; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(7,2,42,0.97); backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.08); padding: 14px 0;
+    }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav__logo { display: flex; align-items: center; text-decoration: none; }
+    .nav__logo img { height: 80px; width: auto; display: block; }
+    .nav__links { display: flex; align-items: center; gap: 20px; list-style: none; }
+    .nav__links a { font-size: 1rem; color: rgba(255,255,255,0.75); font-weight: 500; transition: color 0.2s; }
+    .nav__links a:hover, .nav__links a.active { color: var(--cyan); }
+    .nav__cta {
+      font-size: 0.82rem; font-weight: 700; padding: 10px 22px; border-radius: 100px;
+      background: var(--grad-hot); color: #fff; white-space: nowrap; transition: filter 0.2s;
+    }
+    .nav__cta:hover { filter: brightness(1.12); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(180deg, var(--navy) 0%, #0E0D17 100%);
+      padding: 72px 0 56px; text-align: center; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 400px;
+      background: radial-gradient(ellipse, rgba(73,72,238,0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero__tag {
+      display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--cyan); border: 1px solid rgba(0,249,253,0.3);
+      border-radius: 100px; padding: 4px 14px; margin-bottom: 20px;
+    }
+    .hero__title {
+      font-size: clamp(1.6rem, 4vw, 2.8rem); font-weight: 900; line-height: 1.15;
+      letter-spacing: -0.5px; color: #FFFFFF; max-width: 860px; margin: 0 auto 16px;
+    }
+    .hero__meta {
+      font-size: 0.8rem; color: rgba(255,255,255,0.5);
+      display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap;
+    }
+    .hero__meta-dot { color: var(--magenta); }
+
+    /* ARTÍCULO */
+    .article { padding: 64px 0 80px; }
+    .article__inner { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+
+    .article__body h2 { font-size: 1.5rem; font-weight: 800; margin: 48px 0 14px; line-height: 1.2; color: #1A1A2E; }
+    .article__body h2 .grad {
+      background: linear-gradient(90deg, var(--indigo), var(--magenta));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .article__body h3 { font-size: 1.05rem; font-weight: 700; color: var(--indigo); margin: 28px 0 10px; }
+    .article__body p { font-size: 0.97rem; color: #444455; margin-bottom: 18px; line-height: 1.85; }
+    .article__body p strong { color: #1A1A2E; font-weight: 700; }
+    .article__body ul { list-style: none; margin: 0 0 20px; display: flex; flex-direction: column; gap: 10px; }
+    .article__body ul li { font-size: 0.95rem; color: #444455; display: flex; align-items: flex-start; gap: 10px; }
+    .article__body ul li::before { content: '→'; color: var(--indigo); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+
+    .divider { border: none; height: 1px; background: rgba(73,72,238,0.1); margin: 40px 0; }
+
+    /* CALLOUT */
+    .callout {
+      background: linear-gradient(135deg, rgba(73,72,238,0.05), rgba(239,34,239,0.04));
+      border: 1px solid rgba(73,72,238,0.18); border-left: 3px solid var(--indigo);
+      border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 28px 0;
+    }
+    .callout p { margin: 0; font-size: 0.97rem; color: #1A1A2E; line-height: 1.75; }
+    .callout.warning { border-left-color: #F59E0B; background: rgba(245,158,11,0.05); border-color: rgba(245,158,11,0.2); }
+
+    /* STEPS */
+    .steps { display: flex; flex-direction: column; gap: 16px; margin: 28px 0; }
+    .step {
+      background: #FFFFFF; border: 1px solid rgba(73,72,238,0.12); border-radius: var(--radius);
+      padding: 22px 24px; display: flex; gap: 18px; align-items: flex-start;
+      box-shadow: 0 4px 16px rgba(73,72,238,0.06);
+    }
+    .step__num {
+      width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0;
+      background: var(--grad-hot); color: #fff;
+      display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 800;
+    }
+    .step__title { font-size: 0.97rem; font-weight: 700; margin-bottom: 4px; color: #1A1A2E; }
+    .step__desc { font-size: 0.88rem; color: #5B5B80; line-height: 1.6; }
+
+    /* FAQ */
+    .faq-mini { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+    .faq-mini__item {
+      background: #FFFFFF; border: 1px solid rgba(73,72,238,0.12); border-radius: var(--radius);
+      overflow: hidden; box-shadow: 0 2px 8px rgba(73,72,238,0.04);
+    }
+    .faq-mini__q {
+      padding: 16px 20px; font-size: 0.92rem; font-weight: 600;
+      cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; user-select: none;
+    }
+    .faq-mini__q::after { content: '+'; font-size: 20px; color: var(--indigo); flex-shrink: 0; transition: transform 0.2s; }
+    .faq-mini__item.open .faq-mini__q::after { transform: rotate(45deg); }
+    .faq-mini__a { display: none; padding: 0 20px 16px; font-size: 0.88rem; color: #5B5B80; line-height: 1.7; }
+    .faq-mini__item.open .faq-mini__a { display: block; }
+
+    /* CTA */
+    .article-cta {
+      margin: 48px 0 0; padding: 40px 36px; text-align: center;
+      background: linear-gradient(135deg, rgba(73,72,238,0.06), rgba(239,34,239,0.06));
+      border: 1px solid rgba(73,72,238,0.18); border-radius: 20px;
+    }
+    .article-cta__title { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
+    .article-cta__sub { font-size: 0.95rem; color: #5B5B80; margin-bottom: 24px; }
+    .btn-cta {
+      display: inline-block; padding: 15px 40px; border-radius: 100px;
+      font-weight: 700; font-size: 1rem; color: #fff;
+      background: var(--grad-hot); box-shadow: 0 8px 32px rgba(239,34,239,0.3);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(239,34,239,0.45); }
+
+    /* MÁS ARTÍCULOS */
+    .more { padding: 60px 0 80px; border-top: 1px solid rgba(73,72,238,0.1); }
+    .more__label { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--indigo); margin-bottom: 24px; }
+    .more__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .post-card {
+      background: #FFFFFF; border: 1px solid rgba(73,72,238,0.12); border-radius: var(--radius);
+      overflow: hidden; transition: border-color 0.2s, transform 0.2s;
+      box-shadow: 0 2px 12px rgba(73,72,238,0.05);
+    }
+    .post-card:hover { border-color: rgba(73,72,238,0.25); transform: translateY(-3px); }
+    .post-card__thumb { height: 110px; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; }
+    .post-card.t1 .post-card__thumb { background: linear-gradient(135deg, rgba(73,72,238,0.08), rgba(0,249,253,0.06)); }
+    .post-card.t2 .post-card__thumb { background: linear-gradient(135deg, rgba(239,34,239,0.07), rgba(73,72,238,0.06)); }
+    .post-card__body { padding: 16px; }
+    .post-card__tag { font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--indigo); margin-bottom: 6px; }
+    .post-card__title { font-size: 0.9rem; font-weight: 700; line-height: 1.4; margin-bottom: 6px; color: #1A1A2E; }
+    .post-card__meta { font-size: 0.72rem; color: #5B5B80; }
+
+    /* FOOTER */
+    .footer { background: #07022A; border-top: 1px solid rgba(255,255,255,0.08); padding: 48px 0 28px; text-align: center; }
+    .footer__logo { margin: 0 auto 16px; width: 120px; }
+    .footer__logo img { width: 100%; opacity: 0.9; }
+    .footer__links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+    .footer__links a { font-size: 0.8rem; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    .footer__links a:hover { color: var(--cyan); }
+    .footer__copy { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+
+    @media (max-width: 640px) { .nav__links { display: none; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="./" class="nav__logo">
+          <img src="images/logo-pev.png" alt="Productos Extranjeros Virales">
+        </a>
+        <ul class="nav__links">
+          <li><a href="./">Inicio</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="testimonios.html">Testimonios</a></li>
+          <li><a href="recursos.html" class="active">Recursos</a></li>
+        </ul>
+        <a href="https://pay.hotmart.com/Q97064335L?off=twez13dn&checkoutMode=10&src=RWP" target="_blank" class="nav__cta">Quiero el Método →</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero__tag">Guía gratuita · Hotmart</div>
+      <h1 class="hero__title">
+        Cómo Pedir un Reembolso en Hotmart: Guía Paso a Paso (2026)
+      </h1>
+      <div class="hero__meta">
+        <span>Por el equipo de Productos Extranjeros Virales</span>
+        <span class="hero__meta-dot">✦</span>
+        <span>Julio 2026</span>
+        <span class="hero__meta-dot">✦</span>
+        <span>5 min de lectura</span>
+      </div>
+    </div>
+  </header>
+
+  <article class="article">
+    <div class="article__inner">
+      <div class="article__body">
+
+        <p>
+          Si compraste un producto digital en Hotmart y quieres solicitar tu reembolso, estás en el lugar correcto. <strong>Hotmart ofrece una garantía de devolución</strong> en la mayoría de sus productos — el plazo varía según el productor, pero suele ser de 7 a 30 días desde la compra.
+        </p>
+
+        <p>
+          En esta guía te explicamos cómo hacer el proceso en menos de 5 minutos, directamente desde tu cuenta de comprador.
+        </p>
+
+        <div class="callout">
+          <p>⏱️ <strong>Importante:</strong> Verifica el plazo de garantía del producto antes de solicitar el reembolso. Este dato aparece en la página de ventas del producto o en tu correo de confirmación de compra.</p>
+        </div>
+
+        <hr class="divider">
+
+        <h2><span class="grad">Cómo Solicitar un Reembolso en Hotmart</span></h2>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step__num">1</div>
+            <div>
+              <div class="step__title">Ingresa a tu cuenta de Hotmart</div>
+              <div class="step__desc">Ve a hotmart.com e inicia sesión con el correo con el que compraste el producto. Si no tienes cuenta, busca el correo de confirmación — allí hay un enlace de acceso directo.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">2</div>
+            <div>
+              <div class="step__title">Ve a "Mis compras"</div>
+              <div class="step__desc">En el menú principal, haz clic en tu perfil (esquina superior derecha) y selecciona <strong>Mis compras</strong>. Verás la lista de todos los productos que has adquirido.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">3</div>
+            <div>
+              <div class="step__title">Encuentra el producto y haz clic en "Solicitar reembolso"</div>
+              <div class="step__desc">Localiza el producto y haz clic en los tres puntos (⋯) o en el botón de opciones. Selecciona <strong>Solicitar reembolso</strong>. Si no ves esta opción, puede que el plazo de garantía ya expiró.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">4</div>
+            <div>
+              <div class="step__title">Elige el motivo y confirma</div>
+              <div class="step__desc">Hotmart te pedirá seleccionar un motivo (no satisfecho, compra accidental, etc.). Elige el que corresponda y confirma la solicitud. No es obligatorio dar detalles adicionales.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step__num">5</div>
+            <div>
+              <div class="step__title">Espera la devolución (3–7 días hábiles)</div>
+              <div class="step__desc">Una vez aprobado, el dinero se devuelve a tu método de pago original en 3 a 7 días hábiles. Recibirás un correo de confirmación cuando el reembolso sea procesado.</div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <h2><span class="grad">Preguntas Frecuentes sobre Reembolsos en Hotmart</span></h2>
+
+        <div class="faq-mini">
+          <div class="faq-mini__item">
+            <div class="faq-mini__q">¿Cuánto tiempo tarda el reembolso?</div>
+            <div class="faq-mini__a">Entre 3 y 7 días hábiles para tarjetas de crédito/débito. Las transferencias bancarias pueden tardar hasta 10 días. Recibirás un correo de confirmación cuando el proceso esté completo.</div>
+          </div>
+          <div class="faq-mini__item">
+            <div class="faq-mini__q">¿Puedo pedir reembolso si ya accedí al contenido?</div>
+            <div class="faq-mini__a">Sí, siempre que estés dentro del plazo de garantía. Hotmart respeta la garantía independientemente de si accediste o no al producto. Sin embargo, algunos productores pueden tener condiciones específicas en sus términos.</div>
+          </div>
+          <div class="faq-mini__item">
+            <div class="faq-mini__q">No veo la opción de reembolso. ¿Qué hago?</div>
+            <div class="faq-mini__a">Si no aparece la opción, probablemente el plazo de garantía ya venció, o el producto no tiene garantía habilitada. En ese caso, contacta directamente al productor o escribe a soporte de Hotmart en help.hotmart.com.</div>
+          </div>
+          <div class="faq-mini__item">
+            <div class="faq-mini__q">¿El reembolso vuelve a mi tarjeta o a mi cuenta Hotmart?</div>
+            <div class="faq-mini__a">Depende del método de pago original. Si pagaste con tarjeta, el dinero vuelve a la misma tarjeta. Si pagaste por transferencia o PSE, vuelve a la cuenta bancaria que usaste.</div>
+          </div>
+          <div class="faq-mini__item">
+            <div class="faq-mini__q">¿El Método PEV tiene garantía de reembolso?</div>
+            <div class="faq-mini__a">Sí. PEV tiene <strong>7 días de garantía total</strong>. Si en la primera semana sientes que el programa no es para ti, solicitas tu reembolso directamente desde Hotmart siguiendo los pasos de esta guía — sin preguntas, sin condiciones.</div>
+          </div>
+        </div>
+
+        <div class="callout warning">
+          <p>⚠️ <strong>Consejo:</strong> Guarda siempre el correo de confirmación de compra. Tiene el número de transacción que necesitarás si el proceso de reembolso tiene alguna complicación y debes contactar al soporte de Hotmart.</p>
+        </div>
+
+        <div class="article-cta">
+          <div class="article-cta__title">¿Quieres probar el Método PEV sin riesgo?</div>
+          <div class="article-cta__sub">Tienes 7 días de garantía total. Si no es para ti, te devolvemos cada centavo.</div>
+          <a href="https://pay.hotmart.com/Q97064335L?off=twez13dn&checkoutMode=10&src=RWP" target="_blank" class="btn-cta">Entrar al Método PEV →</a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <section class="more">
+    <div class="container">
+      <div class="more__label">Más recursos</div>
+      <div class="more__grid">
+        <a href="metodo-pev.html" class="post-card t1">
+          <div class="post-card__thumb">🌎</div>
+          <div class="post-card__body">
+            <div class="post-card__tag">Método PEV</div>
+            <div class="post-card__title">Productos Extranjeros Virales: Qué Son y Cómo Ganar Dinero con Ellos</div>
+            <div class="post-card__meta">Leer guía →</div>
+          </div>
+        </a>
+        <div class="post-card t2">
+          <div class="post-card__thumb">🤖</div>
+          <div class="post-card__body">
+            <div class="post-card__tag">Herramientas IA</div>
+            <div class="post-card__title">Las 7 herramientas de IA que usamos para crear productos digitales en horas</div>
+            <div class="post-card__meta">Próximamente</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">
+        <img src="images/logo-pev.png" alt="Productos Extranjeros Virales">
+      </div>
+      <div class="footer__links">
+        <a href="./">Inicio</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="#">Política de Privacidad</a>
+        <a href="#">Términos y Condiciones</a>
+      </div>
+      <div class="footer__copy">© 2026 Productos Extranjeros Virales — Santiago Leal y Laura Zabala. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-mini__q').forEach(q => {
+      q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+    });
+  </script>
+</body>
+</html>
