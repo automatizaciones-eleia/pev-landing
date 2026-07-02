@@ -100,12 +100,13 @@
       box-shadow: 0 12px 40px rgba(73,72,238,0.10);
     }
     .article-card__thumb {
-      height: 160px;
+      height: 200px;
       display: flex; align-items: center; justify-content: center;
       font-size: 3.5rem;
       position: relative;
       overflow: hidden;
     }
+    .article-card__thumb img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
     .article-card.c1 .article-card__thumb { background: linear-gradient(135deg, #07022A 0%, #1a0048 100%); }
     .article-card.c2 .article-card__thumb { background: linear-gradient(135deg, #0f0533 0%, #07022A 100%); }
     .article-card.c3 .article-card__thumb { background: linear-gradient(135deg, #0a0a2e 0%, #07022A 100%); }
@@ -185,7 +186,6 @@
 
   <header class="hero">
     <div class="container">
-      <div class="hero__tag">Recursos gratuitos</div>
       <h1 class="hero__title">Guías y <span class="grad">Recursos</span></h1>
       <p class="hero__sub">Todo lo que necesitas saber para empezar a vender productos digitales en español.</p>
     </div>
@@ -202,13 +202,13 @@
 
         <!-- Artículo 1 -->
         <a href="metodo-pev.html" class="article-card c1">
-          <div class="article-card__thumb">🌎</div>
+          <div class="article-card__thumb"><img src="images/laura-santiago.jpg" alt="Santiago Leal y Laura Zabala — Hotmart Galaxy 26"></div>
           <div class="article-card__body">
             <div class="article-card__tags">
               <span class="article-card__tag">Método PEV</span>
               <span class="article-card__tag">Guía</span>
             </div>
-            <div class="article-card__title">Productos Extranjeros Virales: Qué Son y Cómo Ganar Dinero con Ellos en 2026</div>
+            <div class="article-card__title">Productos Extranjeros Virales</div>
             <div class="article-card__excerpt">El sistema completo de Santiago Leal y Laura Zabala para identificar productos virales en EE.UU., adaptarlos al español con IA y venderlos al mercado hispano sin aparecer en cámara.</div>
             <div class="article-card__footer">
               <span class="article-card__meta">10 min · Julio 2026</span>
