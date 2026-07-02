@@ -1,0 +1,14 @@
+{
+  "id": "session-1782999441277",
+  "startedAt": "2026-07-02T13:37:21.277Z",
+  "cwd": "/Users/laurabermudez/Projects/pev-landing",
+  "context": {},
+  "metrics": {
+    "edits": 51,
+    "commands": 0,
+    "tasks": 0,
+    "errors": 0
+  },
+  "endedAt": "2026-07-02T14:06:33.467Z",
+  "duration": 1752191
+}
