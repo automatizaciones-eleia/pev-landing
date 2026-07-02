@@ -794,6 +794,17 @@
     .breadcrumb__item a{color:rgba(255,255,255,.7);text-decoration:none;}
     .breadcrumb__item a:hover{color:var(--indigo);}
     .breadcrumb__item+.breadcrumb__item::before{content:"›";margin:0 8px;color:rgba(255,255,255,.35);}
+    .about-story,.about-mission,.about-numbers{margin:48px 0;}
+    .about-story__title,.about-mission__title,.about-numbers__title,.about-team-title{font-size:1.55rem;font-weight:800;margin-bottom:18px;color:#1A1A2E;}
+    .about-story__title .grad{background:linear-gradient(90deg,#4948EE,#EF22EF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .about-story p,.about-mission p{font-size:0.97rem;color:#444455;line-height:1.85;margin-bottom:16px;}
+    .about-story p strong{color:#1A1A2E;}
+    .about-team-title{margin:48px 0 24px;}
+    .about-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px;}
+    .about-stat{background:#FFFFFF;border:1px solid rgba(73,72,238,.12);border-radius:14px;padding:24px 16px;text-align:center;box-shadow:0 4px 16px rgba(73,72,238,.06);}
+    .about-stat__num{font-size:1.8rem;font-weight:900;background:linear-gradient(90deg,#4948EE,#EF22EF);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .about-stat__label{font-size:0.78rem;color:#5B5B80;margin-top:4px;font-weight:600;}
+    @media(max-width:640px){.about-stats{grid-template-columns:repeat(2,1fr);}}
   </style>
   <script type="application/ld+json">
   {
@@ -928,6 +939,43 @@
             persona en Latinoamérica puede construir un negocio digital rentable — sin aparecer en cámara,
             sin crear contenido viral, y sin inventar un producto desde cero.
           </p>
+
+          <section class="about-story">
+            <h2 class="about-story__title">El origen del <span class="grad">Método PEV</span></h2>
+            <p>Productos Extranjeros Virales nació de una observación simple pero poderosa: los productos digitales más exitosos del mercado anglosajón —cursos, ebooks, plantillas, programas de mentalidad— llegaban al mercado hispano con años de retraso, o no llegaban del todo. Santiago Leal y Laura Zabala vieron esa brecha como una oportunidad.</p>
+            <p>En 2022, con herramientas de inteligencia artificial aún en etapas tempranas, comenzaron a adaptar productos digitales validados en Estados Unidos y Brasil para venderlos en español. Los resultados llegaron rápido: en sus primeros meses generaron ingresos en dólares desde Latinoamérica sin necesidad de aparecer en cámara, sin inventar nada desde cero y sin grandes equipos.</p>
+            <p>Lo que comenzó como un experimento personal se convirtió en el <strong>Método PEV</strong>: un sistema replicable de 5 pasos para identificar productos extranjeros virales, adaptarlos con IA en horas y venderlos al mercado hispano. Hoy, más de 80.000 estudiantes en más de 51 países aplican este método.</p>
+          </section>
+
+          <section class="about-mission">
+            <h2 class="about-mission__title">Nuestra misión</h2>
+            <p>Creemos que cualquier persona hispanohablante —independientemente de su país, nivel técnico o capital inicial— puede construir un negocio digital rentable si tiene acceso al conocimiento correcto y las herramientas adecuadas. Nuestra misión es ser ese puente entre el mercado global de productos digitales y los emprendedores del mundo hispano.</p>
+            <p>No enseñamos a crear desde cero ni a reinventar la rueda. Enseñamos a identificar lo que ya funciona, adaptarlo con inteligencia y ejecutarlo con un sistema probado. Eso es Productos Extranjeros Virales.</p>
+          </section>
+
+          <section class="about-numbers">
+            <h2 class="about-numbers__title">PEV en números</h2>
+            <div class="about-stats">
+              <div class="about-stat">
+                <div class="about-stat__num">+80K</div>
+                <div class="about-stat__label">Estudiantes activos</div>
+              </div>
+              <div class="about-stat">
+                <div class="about-stat__num">51+</div>
+                <div class="about-stat__label">Países</div>
+              </div>
+              <div class="about-stat">
+                <div class="about-stat__num">+$5M USD</div>
+                <div class="about-stat__label">Generados por alumnos</div>
+              </div>
+              <div class="about-stat">
+                <div class="about-stat__num">2022</div>
+                <div class="about-stat__label">Año de fundación</div>
+              </div>
+            </div>
+          </section>
+
+          <h2 class="about-team-title">Conoce al equipo</h2>
 
           <div class="team-grid">
 
