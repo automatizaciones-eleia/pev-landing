@@ -787,6 +787,13 @@
     .footer { background: #07022A; color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.08); }
     .footer__links a { color: rgba(255,255,255,0.55); }
     .footer__copy { color: rgba(255,255,255,0.35); }
+
+    .breadcrumb{padding:8px 0;background:rgba(7,2,42,0.85);}
+    .breadcrumb__list{display:flex;list-style:none;margin:0;padding:0;font-size:.78rem;flex-wrap:wrap;align-items:center;}
+    .breadcrumb__item{color:rgba(255,255,255,.5);}
+    .breadcrumb__item a{color:rgba(255,255,255,.7);text-decoration:none;}
+    .breadcrumb__item a:hover{color:var(--indigo);}
+    .breadcrumb__item+.breadcrumb__item::before{content:"›";margin:0 8px;color:rgba(255,255,255,.35);}
   </style>
   <script type="application/ld+json">
   {
@@ -809,6 +816,13 @@
         "name": "Laura Zabala",
         "jobTitle": "Co-fundadora",
         "worksFor": {"@type": "Organization", "name": "Productos Extranjeros Virales"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.metodoauraia.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Quiénes Somos", "item": "https://www.metodoauraia.com/quienes-somos.html"}
+        ]
       }
     ]
   }
@@ -834,6 +848,15 @@
         <a href="https://pay.hotmart.com/Q97064335L?off=twez13dn&checkoutMode=10&src=RWP" target="_blank" rel="noopener noreferrer" class="nav__cta">Quiero el Método →</a>
         <button class="nav__burger" id="navBurger" aria-label="Menú">☰</button>
       </div>
+    </div>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <div class="container">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="./">Inicio</a></li>
+        <li class="breadcrumb__item">Quiénes Somos</li>
+      </ol>
     </div>
   </nav>
 
@@ -911,7 +934,7 @@
             <div class="team-card">
               <div class="team-card__avatar"><img src="images/team/santiago-leal.jpg" alt="Santiago Leal" loading="lazy"></div>
               <div class="team-card__content">
-                <div class="team-card__name">Santiago Leal</div>
+                <h3 class="team-card__name">Santiago Leal</h3>
                 <div class="team-card__role">Co-fundador del Método</div>
                 <p class="team-card__bio">
                   Co-creador del método junto con Laura Zabala. Arquitecto de la estrategia que llevó
@@ -927,7 +950,7 @@
             <div class="team-card">
               <div class="team-card__avatar"><img src="images/team/laura-zabala.jpg" alt="Laura Zabala" loading="lazy"></div>
               <div class="team-card__content">
-                <div class="team-card__name">Laura Zabala</div>
+                <h3 class="team-card__name">Laura Zabala</h3>
                 <div class="team-card__role">Co-fundadora del Método</div>
                 <p class="team-card__bio">
                   Psicóloga de formación y empresaria digital. Co-creadora del método junto con Santiago Leal,
@@ -945,7 +968,7 @@
             <div class="team-card">
               <div class="team-card__avatar"><img src="images/team/anderson-victoria.jpg" alt="Anderson Victoria" loading="lazy"></div>
               <div class="team-card__content">
-                <div class="team-card__name">Anderson Victoria</div>
+                <h3 class="team-card__name">Anderson Victoria</h3>
                 <div class="team-card__role">Experto en Marketing, Estrategia y Tráfico</div>
                 <p class="team-card__bio">
                   Especialista en marketing digital y tráfico de pago con experiencia en empresas como 30X.
@@ -962,7 +985,7 @@
             <div class="team-card">
               <div class="team-card__avatar"><img src="images/team/alejandro-hincapie.jpg" alt="Alejandro Hincapié" loading="lazy"></div>
               <div class="team-card__content">
-                <div class="team-card__name">Alejandro Hincapié</div>
+                <h3 class="team-card__name">Alejandro Hincapié</h3>
                 <div class="team-card__role">Experto en Tráfico</div>
                 <p class="team-card__bio">
                   Especialista en tráfico digital y optimización de campañas para productos digitales
@@ -978,7 +1001,7 @@
             <div class="team-card">
               <div class="team-card__avatar"><img src="images/team/jackson-moncada.jpg" alt="Jackson Moncada" loading="lazy"></div>
               <div class="team-card__content">
-                <div class="team-card__name">Jackson Moncada</div>
+                <h3 class="team-card__name">Jackson Moncada</h3>
                 <div class="team-card__role">Especialista en Tráfico · Caso de Éxito</div>
                 <p class="team-card__bio">
                   Estudiante que aplicó el método y facturó más de $50.000 USD. Hoy colabora con
@@ -995,7 +1018,7 @@
             <div class="team-card">
               <div class="team-card__avatar"><img src="images/team/laura-bermudez.jpg" alt="Laura Bermúdez" style="object-position: center 20%;" loading="lazy"></div>
               <div class="team-card__content">
-                <div class="team-card__name">Laura Bermúdez</div>
+                <h3 class="team-card__name">Laura Bermúdez</h3>
                 <div class="team-card__role">Experta en Tecnología y Automatizaciones</div>
                 <p class="team-card__bio">
                   Especialista en tecnología y automatización de procesos con experiencia en empresas como Torre.
@@ -1012,7 +1035,7 @@
             <div class="team-card">
               <div class="team-card__avatar"><img src="images/team/manuela-torres.jpg" alt="Manuela Torres" loading="lazy"></div>
               <div class="team-card__content">
-                <div class="team-card__name">Manuela Torres</div>
+                <h3 class="team-card__name">Manuela Torres</h3>
                 <div class="team-card__role">Líder de Operaciones</div>
                 <p class="team-card__bio">
                   Responsable de que toda la operación funcione de manera eficiente, coordinando al equipo

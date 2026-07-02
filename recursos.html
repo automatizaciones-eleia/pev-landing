@@ -175,7 +175,23 @@
       .blog__grid { grid-template-columns: 1fr; }
       .newsletter { padding: 32px 24px; }
     }
+    .breadcrumb{padding:8px 0;background:rgba(7,2,42,0.85);}
+    .breadcrumb__list{display:flex;list-style:none;margin:0;padding:0;font-size:.78rem;flex-wrap:wrap;align-items:center;}
+    .breadcrumb__item{color:rgba(255,255,255,.5);}
+    .breadcrumb__item a{color:rgba(255,255,255,.7);text-decoration:none;}
+    .breadcrumb__item a:hover{color:var(--indigo,#4948EE);}
+    .breadcrumb__item+.breadcrumb__item::before{content:"›";margin:0 8px;color:rgba(255,255,255,.35);}
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.metodoauraia.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Recursos y Guías", "item": "https://www.metodoauraia.com/recursos.html"}
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -195,6 +211,15 @@
         <a href="https://pay.hotmart.com/Q97064335L?off=twez13dn&checkoutMode=10&src=RWP" target="_blank" rel="noopener noreferrer" class="nav__cta">Quiero el Método →</a>
         <button class="nav__burger" id="navBurger" aria-label="Menú">☰</button>
       </div>
+    </div>
+  </nav>
+
+  <nav class="breadcrumb" aria-label="Ruta de navegación">
+    <div class="container">
+      <ol class="breadcrumb__list">
+        <li class="breadcrumb__item"><a href="./">Inicio</a></li>
+        <li class="breadcrumb__item">Recursos y Guías</li>
+      </ol>
     </div>
   </nav>
 
