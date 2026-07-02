@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de Reembolso — Productos Extranjeros Virales</title>
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <style>
+    :root {
+      --navy:    #07022A;
+      --magenta: #EF22EF;
+      --cyan:    #00F9FD;
+      --indigo:  #4948EE;
+      --grad-hot: linear-gradient(135deg, #EF22EF, #4948EE);
+      --font: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      --radius: 14px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font); background: #FFFFFF; color: #1A1A2E; line-height: 1.7; }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+    /* NAV */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(7,2,42,0.97); backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255,255,255,0.08); padding: 14px 0;
+    }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav__logo { display: flex; align-items: center; text-decoration: none; }
+    .nav__logo img { height: 80px; width: auto; display: block; }
+    .nav__links { display: flex; align-items: center; gap: 20px; list-style: none; }
+    .nav__links a { font-size: 1rem; color: rgba(255,255,255,0.75); font-weight: 500; transition: color 0.2s; }
+    .nav__links a:hover { color: var(--cyan); }
+    .nav__cta {
+      font-size: 0.82rem; font-weight: 700; padding: 10px 22px; border-radius: 100px;
+      background: var(--grad-hot); color: #fff; white-space: nowrap; transition: filter 0.2s;
+    }
+    .nav__cta:hover { filter: brightness(1.12); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(180deg, var(--navy) 0%, #0E0D17 100%);
+      padding: 72px 0 56px; text-align: center; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -80px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 400px;
+      background: radial-gradient(ellipse, rgba(73,72,238,0.1) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero__tag {
+      display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--cyan); border: 1px solid rgba(0,249,253,0.3);
+      border-radius: 100px; padding: 4px 14px; margin-bottom: 20px;
+    }
+    .hero__title {
+      font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; line-height: 1.1;
+      letter-spacing: -0.5px; color: #FFFFFF; max-width: 860px; margin: 0 auto 16px;
+    }
+    .hero__meta {
+      font-size: 0.8rem; color: rgba(255,255,255,0.5);
+      display: flex; justify-content: center; align-items: center; gap: 16px; flex-wrap: wrap;
+    }
+
+    /* ARTÍCULO */
+    .article { padding: 64px 0 80px; }
+    .article__inner { max-width: 780px; margin: 0 auto; padding: 0 24px; }
+    .article__body h2 { font-size: 1.4rem; font-weight: 800; margin: 48px 0 14px; line-height: 1.2; color: #1A1A2E; border-bottom: 2px solid rgba(73,72,238,0.12); padding-bottom: 10px; }
+    .article__body p { font-size: 0.97rem; color: #444455; margin-bottom: 18px; line-height: 1.85; }
+    .article__body p strong { color: #1A1A2E; font-weight: 700; }
+    .article__body ul { list-style: none; margin: 0 0 20px; display: flex; flex-direction: column; gap: 10px; }
+    .article__body ul li { font-size: 0.95rem; color: #444455; display: flex; align-items: flex-start; gap: 10px; }
+    .article__body ul li::before { content: '→'; color: var(--indigo); font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+    .divider { border: none; height: 1px; background: rgba(73,72,238,0.1); margin: 40px 0; }
+
+    /* CTA */
+    .article-cta {
+      margin: 48px 0 0; padding: 40px 36px; text-align: center;
+      background: linear-gradient(135deg, rgba(37,211,102,0.06), rgba(37,211,102,0.03));
+      border: 1px solid rgba(37,211,102,0.2); border-radius: 20px;
+    }
+    .article-cta__title { font-size: 1.4rem; font-weight: 800; margin-bottom: 10px; }
+    .article-cta__sub { font-size: 0.95rem; color: #5B5B80; margin-bottom: 24px; }
+    .btn-wa {
+      display: inline-flex; align-items: center; gap: 10px; padding: 15px 40px; border-radius: 100px;
+      font-weight: 700; font-size: 1rem; color: #fff; background: #25D366;
+      box-shadow: 0 8px 32px rgba(37,211,102,0.35); transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-wa:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(37,211,102,0.5); }
+
+    /* FOOTER */
+    .footer { background: #07022A; border-top: 1px solid rgba(255,255,255,0.08); padding: 48px 0 28px; text-align: center; }
+    .footer__logo { margin: 0 auto 16px; width: 120px; }
+    .footer__logo img { width: 100%; opacity: 0.9; }
+    .footer__links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; }
+    .footer__links a { font-size: 0.8rem; color: rgba(255,255,255,0.55); transition: color 0.2s; }
+    .footer__links a:hover { color: var(--cyan); }
+    .footer__copy { font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+
+    .nav__burger{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;padding:4px 8px;line-height:1;z-index:201;position:relative}
+    @media(max-width:640px){.nav__burger{display:block}.nav__links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(7,2,42,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:36px;z-index:200;list-style:none;padding:0;margin:0}.nav__links.open{display:flex}.nav__links a{font-size:1.3rem;color:#fff!important}.nav__cta{display:none!important}}
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="./" class="nav__logo">
+          <img src="images/logo-pev.png" alt="Productos Extranjeros Virales">
+        </a>
+        <ul class="nav__links">
+          <li><a href="./">Inicio</a></li>
+          <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="testimonios.html">Testimonios</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+        </ul>
+        <a href="https://pay.hotmart.com/Q97064335L?off=twez13dn&checkoutMode=10&src=RWP" target="_blank" class="nav__cta">Quiero el Método →</a>
+        <button class="nav__burger" id="navBurger" aria-label="Menú">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero__tag">Legal</div>
+      <h1 class="hero__title">Política de Reembolso</h1>
+      <div class="hero__meta">
+        <span>Última actualización: julio 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <article class="article">
+    <div class="article__inner">
+      <div class="article__body">
+
+        <h2>Garantía de 7 días</h2>
+        <p>Todos nuestros productos digitales cuentan con una <strong>garantía de satisfacción de 7 días calendario</strong> desde la fecha de compra. Si por cualquier motivo no estás satisfecho con el producto, puedes solicitar un reembolso completo sin necesidad de justificar tu decisión.</p>
+
+        <h2>¿Cómo solicitar tu reembolso?</h2>
+        <p>Los reembolsos se tramitan directamente a través de Hotmart, la plataforma de pago que usamos para procesar todas nuestras ventas. Para solicitar tu reembolso:</p>
+        <ul>
+          <li>Ingresa a tu cuenta de Hotmart en hotmart.com</li>
+          <li>Ve a "Mis compras" y localiza el producto que deseas devolver</li>
+          <li>Haz clic en "Solicitar reembolso" y sigue las instrucciones</li>
+          <li>Recibirás una confirmación por correo electrónico en un plazo de 1–3 días hábiles</li>
+        </ul>
+        <p>También puedes escribirnos directamente por WhatsApp usando el botón de esta página y te ayudaremos con el proceso.</p>
+
+        <h2>Plazos de procesamiento</h2>
+        <p>Una vez aprobada la solicitud de reembolso por Hotmart, el tiempo de devolución del dinero depende del método de pago original:</p>
+        <ul>
+          <li>Tarjeta de crédito/débito: 5 a 10 días hábiles</li>
+          <li>PayPal: 3 a 5 días hábiles</li>
+          <li>Transferencia bancaria: 5 a 7 días hábiles</li>
+        </ul>
+
+        <h2>Excepciones</h2>
+        <p>La garantía de 7 días aplica para compras realizadas directamente a través de nuestra plataforma de pago oficial (Hotmart). No aplica en los siguientes casos:</p>
+        <ul>
+          <li>Solicitudes realizadas después de los 7 días calendario desde la fecha de compra</li>
+          <li>Compras realizadas a través de terceros no autorizados</li>
+          <li>Cuentas suspendidas por uso indebido o violación de los términos de servicio</li>
+        </ul>
+
+        <h2>Contacto</h2>
+        <p>Si tienes dudas sobre tu reembolso o necesitas ayuda con el proceso, puedes contactarnos a través del botón de WhatsApp en esta página o escribirnos a través de nuestras redes sociales. Respondemos en un plazo máximo de 24 horas hábiles.</p>
+
+        <div class="article-cta">
+          <div class="article-cta__title">¿Necesitas ayuda?</div>
+          <div class="article-cta__sub">Escríbenos directamente por WhatsApp y te acompañamos en el proceso.</div>
+          <a href="https://wha.link/e99A8e" target="_blank" class="btn-wa">
+            <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.672 5.1 1.848 7.256L1 31l7.98-2.092A14.95 14.95 0 0016 31c8.284 0 15-6.716 15-15S24.284 1 16 1z" fill="#fff"/><path d="M23.1 20.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.57-.49-.49-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.46 0 1.45 1.06 2.85 1.21 3.05.15.2 2.07 3.17 5.02 4.44.7.3 1.25.48 1.67.62.7.22 1.34.19 1.85.12.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#25D366"/></svg>
+            Escribir por WhatsApp
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </article>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">
+        <img src="images/logo-pev.png" alt="Productos Extranjeros Virales">
+      </div>
+      <div class="footer__links">
+        <a href="./">Inicio</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="politica-de-privacidad.html">Política de Privacidad</a>
+        <a href="terminos-y-condiciones.html">Términos y Condiciones</a>
+        <a href="politica-de-reembolso.html">Política de Reembolso</a>
+      </div>
+      <div class="footer__copy">© 2026 Productos Extranjeros Virales — Santiago Leal y Laura Zabala. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <script>(function(){var b=document.getElementById('navBurger'),l=document.querySelector('.nav__links');if(!b||!l)return;b.addEventListener('click',function(){l.classList.toggle('open');b.textContent=l.classList.contains('open')?'✕':'☰';});l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('open');b.textContent='☰';});});})();</script>
+  <a href="https://wha.link/e99A8e" target="_blank" class="wa-float" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16 1C7.716 1 1 7.716 1 16c0 2.628.672 5.1 1.848 7.256L1 31l7.98-2.092A14.95 14.95 0 0016 31c8.284 0 15-6.716 15-15S24.284 1 16 1z" fill="#25D366"/><path d="M23.1 20.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.76-1.66-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.57-.49-.49-.67-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.46 0 1.45 1.06 2.85 1.21 3.05.15.2 2.07 3.17 5.02 4.44.7.3 1.25.48 1.67.62.7.22 1.34.19 1.85.12.56-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z" fill="#fff"/></svg>
+  </a>
+  <style>.wa-float{position:fixed;bottom:24px;right:24px;z-index:9999;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.5);transition:transform .2s,box-shadow .2s}.wa-float:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.7)}</style>
+</body>
+</html>
