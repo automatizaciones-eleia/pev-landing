@@ -105,6 +105,115 @@
       max-width: 600px;
     }
 
+    .about-pev-section { text-align: center; }
+    .about-pev-section .divider { margin-left: auto; margin-right: auto; }
+    .about-pev-section .section-sub { margin: 0 auto; }
+    .about-pev p {
+      font-size: 17px;
+      color: var(--gray-400);
+      line-height: 1.8;
+      max-width: 760px;
+      margin: 0 auto 18px;
+      text-align: left;
+    }
+    .about-pev strong { color: var(--gray-200); }
+    .about-pev__stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin: 32px auto 0;
+      max-width: 760px;
+    }
+    .about-pev__stat {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(73,72,238,0.07);
+    }
+    .about-pev__stat-number {
+      font-size: 26px;
+      font-weight: 800;
+      background: var(--gradient-gold);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .about-pev__stat-label { font-size: 13px; color: var(--gray-400); margin-top: 4px; }
+    .about-pev__quote {
+      border-left: 4px solid var(--gold);
+      background: var(--bg-section);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 24px 28px;
+      margin: 28px auto;
+      max-width: 760px;
+      text-align: left;
+    }
+    .about-pev__quote p {
+      font-size: 19px;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--gray-200);
+      line-height: 1.6;
+      margin: 0;
+      max-width: none;
+    }
+    .about-pev__quote cite {
+      display: block;
+      font-size: 13px;
+      font-style: normal;
+      color: var(--gray-400);
+      margin-top: 10px;
+    }
+    .about-pev__subtitle {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--gray-200);
+      margin: 40px 0 16px;
+    }
+    .about-pev__steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .step-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 18px;
+      box-shadow: 0 4px 20px rgba(73,72,238,0.07);
+      text-align: left;
+    }
+    .step-card__num {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--white);
+      background: var(--gradient-gold);
+      border-radius: 6px;
+      padding: 3px 10px;
+      margin-bottom: 10px;
+    }
+    .step-card__title { font-size: 15px; font-weight: 800; color: var(--gray-200); margin-bottom: 6px; }
+    .step-card__desc { font-size: 13.5px; color: var(--gray-400); line-height: 1.6; }
+    .about-pev__no {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .no-card {
+      background: var(--bg-section);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 18px;
+      text-align: left;
+    }
+    .no-card__title { font-size: 15px; font-weight: 800; color: var(--gray-200); margin-bottom: 6px; }
+    .no-card__desc { font-size: 13.5px; color: var(--gray-400); line-height: 1.6; }
+
     .divider {
       width: 60px;
       height: 3px;
@@ -1216,6 +1325,132 @@
     </div>
   </section>
 
+  <!-- ==================== QUÉ ES PEV ==================== -->
+  <section class="section about-pev-section">
+    <div class="container">
+      <div class="tag">Conoce el proyecto</div>
+      <h2 class="section-title">
+        ¿Qué es <span>Productos Extranjeros Virales</span>?
+      </h2>
+      <div class="divider"></div>
+
+      <div class="about-pev">
+        <p>
+          Todo empezó con una venta de <strong>31 dólares</strong>. El 23 de octubre de 2021, <strong>Laura Zabala</strong>
+          — psicóloga colombiana, sin contactos, sin audiencia y sin experiencia técnica — vendió su primer producto
+          digital a una persona que no conocía, en un país donde nunca había vivido: España. Esa venta demostró
+          la idea que lo cambió todo: <strong>no necesitas inventar nada para vender en internet.
+          Necesitas encontrar lo que ya funciona.</strong>
+        </p>
+        <p>
+          Junto a <strong>Santiago Leal</strong> descubrió un patrón que casi nadie estaba aprovechando: los productos
+          digitales más exitosos de Brasil, Estados Unidos y Europa — ebooks, cursos, kits educativos, plantillas —
+          tardan años en llegar al mercado hispano, o no llegan nunca. Un mismo producto ganador puede estar
+          vendiéndose en francés, alemán, griego, turco y hasta mandarín… <strong>y no existir en español</strong>.
+          Esa brecha es una oportunidad gigante, y en 2022 nació <strong>Productos Extranjeros Virales (PEV)</strong>,
+          la escuela de negocios digitales creada para enseñar a aprovecharla.
+        </p>
+
+        <blockquote class="about-pev__quote">
+          <p>"Nunca empezamos de cero. Siempre partimos de algo que ya está funcionando.
+          Modelamos lo que funciona, lo mejoramos y lo vendemos."</p>
+          <cite>— Laura Zabala, co-fundadora de PEV</cite>
+        </blockquote>
+
+        <p>
+          El corazón del método es el <strong>Espionaje Viral</strong>: una técnica para detectar productos ganadores
+          usando la biblioteca de anuncios de Meta, una herramienta pública y gratuita. En lugar de adivinar qué
+          podría vender, aprendes a leer las señales que no mienten: cuántos anuncios activos tiene un producto,
+          cuántas veces su vendedor duplica el mismo anuncio, cuántos competidores lo están vendiendo ahora mismo.
+          La lógica es contundente: <strong>nadie repite un anuncio que no le funciona, y nadie invierte miles de
+          dólares al día en un producto que no vende.</strong>
+        </p>
+        <p>
+          Una vez identificado un producto validado, entra la <strong>inteligencia artificial</strong>: con herramientas
+          como ChatGPT, Gamma, Canva y Lovable, los alumnos crean su propia versión — adaptada, mejorada y en el idioma
+          que elijan — en cuestión de horas, no de meses. Una página de ventas en menos de 10 minutos. Un ebook completo
+          con diseño profesional en una tarde. El programa incluye además <strong>AURA</strong>, la inteligencia
+          artificial propia de PEV, entrenada con toda la metodología, capaz de ayudarte a crear tu producto en minutos.
+          No necesitas hablar otros idiomas ni saber diseñar: la propia Laura vende en idiomas que no domina.
+        </p>
+
+        <h3 class="about-pev__subtitle">El método, en 5 pasos</h3>
+        <div class="about-pev__steps">
+          <div class="step-card">
+            <span class="step-card__num">PASO 1</span>
+            <div class="step-card__title">🕵️ Espionaje Viral</div>
+            <p class="step-card__desc">Rastrea la biblioteca de anuncios de Meta en Brasil, EE.UU. y Europa para detectar productos digitales que ya venden masivamente.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-card__num">PASO 2</span>
+            <div class="step-card__title">✅ Validación</div>
+            <p class="step-card__desc">Solo pasan los productos con señales duras: decenas de anuncios activos, varios competidores y ventas comprobadas. Sin apuestas a ciegas.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-card__num">PASO 3</span>
+            <div class="step-card__title">🤖 Adaptación con IA</div>
+            <p class="step-card__desc">Modela (nunca copia) el producto con ChatGPT, Gamma y AURA: nombre propio, mejor diseño, otro idioma, tu estilo.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-card__num">PASO 4</span>
+            <div class="step-card__title">🚀 Lanzamiento</div>
+            <p class="step-card__desc">Publica en Hotmart como productor — dueño del 100% de tu producto y tus comisiones — con checkout y embudo optimizados.</p>
+          </div>
+          <div class="step-card">
+            <span class="step-card__num">PASO 5</span>
+            <div class="step-card__title">📈 Escala</div>
+            <p class="step-card__desc">Campañas de Meta Ads con presupuestos pequeños, lectura de métricas y optimización constante hasta escalar tus ventas.</p>
+          </div>
+        </div>
+
+        <h3 class="about-pev__subtitle">Lo que PEV no es</h3>
+        <div class="about-pev__no">
+          <div class="no-card">
+            <div class="no-card__title">❌ No es afiliación</div>
+            <p class="no-card__desc">Eres dueño del 100% de tu producto y de tus comisiones. Nadie puede cancelarte el producto y dejarte sin fuente de ingresos.</p>
+          </div>
+          <div class="no-card">
+            <div class="no-card__title">❌ No es dropshipping</div>
+            <p class="no-card__desc">Son productos digitales: sin inventario, sin logística, sin envíos. Se entregan con un clic directamente al correo del cliente.</p>
+          </div>
+          <div class="no-card">
+            <div class="no-card__title">❌ No es copiar</div>
+            <p class="no-card__desc">Es modelar: partir de lo que ya está validado y diferenciarte con IA. "No robamos contenido, modelamos lo que ya funciona."</p>
+          </div>
+        </div>
+
+        <h3 class="about-pev__subtitle">Una comunidad: los púrpuras</h3>
+        <p>
+          Detrás del método hay una comunidad. Más de <strong>80.000 alumnos en más de 51 países</strong> que se llaman
+          a sí mismos <strong>"los púrpuras"</strong>, por la filosofía de <em>La Vaca Púrpura</em> de Seth Godin:
+          diferenciarse, actuar rápido y responsabilizarse de los resultados. El programa incluye sesiones de
+          implementación en vivo con más de mil personas conectadas, actualizaciones constantes de estrategias
+          validadas y acompañamiento paso a paso — porque, como repite Laura,
+          <strong>"al dinero le gusta la velocidad"</strong>.
+        </p>
+
+        <div class="about-pev__stats">
+          <div class="about-pev__stat">
+            <div class="about-pev__stat-number">2022</div>
+            <div class="about-pev__stat-label">Año de fundación</div>
+          </div>
+          <div class="about-pev__stat">
+            <div class="about-pev__stat-number">+80K</div>
+            <div class="about-pev__stat-label">Alumnos activos</div>
+          </div>
+          <div class="about-pev__stat">
+            <div class="about-pev__stat-number">+51</div>
+            <div class="about-pev__stat-label">Países hispanos</div>
+          </div>
+          <div class="about-pev__stat">
+            <div class="about-pev__stat-number">+$5M</div>
+            <div class="about-pev__stat-label">USD generados</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== PROBLEMA ==================== -->
   <section class="section section--alt">
     <div class="container">
@@ -1358,8 +1593,8 @@
     </div>
   </section>
 
-  <!-- ==================== PRODUCTOS ==================== -->
-  <section class="section section--alt">
+  <!-- ==================== PRODUCTOS (OCULTO temporalmente — NO eliminar; quitar style="display:none" para volver a mostrar) ==================== -->
+  <section class="section section--alt" style="display:none">
     <div class="container">
       <div class="tag">Nuestros programas</div>
       <h2 class="section-title">
